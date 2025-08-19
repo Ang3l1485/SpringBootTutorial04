@@ -61,6 +61,7 @@ model.addAttribute("subtitle", product.get("name") + " - Product Information");
 
 model.addAttribute("product", product);
 
+
 return "product/show";
 
 }
