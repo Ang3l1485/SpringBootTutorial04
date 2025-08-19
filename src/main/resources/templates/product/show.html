@@ -45,8 +45,8 @@
 <div class="card-body">
 
 <h5 class="card-title">
-  <span th:if="${T(java.lang.Integer).parseInt(product.price) > 100}" style="color:red;" th:text="${product.name}"></span>
-  <span th:if="${T(java.lang.Integer).parseInt(product.price) <= 100}" th:text="${product.name}"></span>
+  <span th:if="${T(java.lang.Double).parseDouble(product.price) > 100}" style="color:red;" th:text="${product.name}"></span>
+  <span th:if="${T(java.lang.Double).parseDouble(product.price) <= 100}" th:text="${product.name}"></span>
 </h5>
 
 <p class="card-text" th:text="${product.description}"></p>

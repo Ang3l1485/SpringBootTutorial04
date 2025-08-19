@@ -1,5 +1,6 @@
 package com.docencia.tutorial01.controllers;
 
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 
 import jakarta.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ private String name;
 
 
 @NotNull(message = "The price is required")
+@Min(value = 1, message = "El precio debe ser mayor a 0")
 
 private Double price;
 

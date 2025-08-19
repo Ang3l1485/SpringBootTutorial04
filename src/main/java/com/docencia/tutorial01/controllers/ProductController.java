@@ -96,16 +96,15 @@ return "product/create";
 
 Map<String, String> newProduct = new HashMap<>();
 
-newProduct.put("id", String.valueOf(products.size() + 1));
 
-newProduct.put("name", productForm.getName());
+	newProduct.put("id", String.valueOf(products.size() + 1));
+	newProduct.put("name", productForm.getName());
+	newProduct.put("price", String.valueOf(productForm.getPrice()));
+	newProduct.put("description", "Price: $" + productForm.getPrice());
+	products.add(newProduct);
 
-newProduct.put("description", "Price: $" + productForm.getPrice());
 
-products.add(newProduct);
-
-
-return "redirect:/products";
+	return "product/created";
 
 }
 
