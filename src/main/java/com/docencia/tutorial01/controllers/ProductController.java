@@ -19,10 +19,10 @@ public class ProductController {
 
 
 private static final List<Map<String, String>> products = new ArrayList<>(List.of(
-	Map.of("id", "1", "name", "TV", "description", "Best TV"),
-	Map.of("id", "2", "name", "iPhone", "description", "Best iPhone"),
-	Map.of("id", "3", "name", "Chromecast", "description", "Best Chromecast"),
-	Map.of("id", "4", "name", "Glasses", "description", "Best Glasses")
+	Map.of("id", "1", "name", "TV", "description", "Best TV", "price", "499"),
+	Map.of("id", "2", "name", "iPhone", "description", "Best iPhone", "price", "1200"),
+	Map.of("id", "3", "name", "Chromecast", "description", "Best Chromecast", "price", "35"),
+	Map.of("id", "4", "name", "Glasses", "description", "Best Glasses", "price", "10")
 ));
 
 
@@ -50,11 +50,9 @@ int productId = Integer.parseInt(id) - 1;
 
 if (productId < 0 || productId >= products.size()) {
 
-return "redirect:/products";
+return "redirect:/";
 
 }
-
-
 Map<String, String> product = products.get(productId);
 
 model.addAttribute("title", product.get("name") + " - Online Store");
